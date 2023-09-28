@@ -1,11 +1,11 @@
 async function main(params) {
   const { CloudantV1 } = require('@ibm-cloud/cloudant');
   const { IamAuthenticator } = require('ibm-cloud-sdk-core');
-  const authenticator = new IamAuthenticator({ apikey: "NMZMf5sVTPtKFdJcRsvtnei4tsTtHAlMDHEOZfG_8szb" })
+  const authenticator = new IamAuthenticator({ apikey: "api-key" })
   const cloudant = CloudantV1.newInstance({
     authenticator: authenticator
   });
-  cloudant.setServiceUrl("https://19fd4970-9180-4d9c-8e46-a95087cf83e1-bluemix.cloudantnosqldb.appdomain.cloud");
+  cloudant.setServiceUrl("url");
 
   try {
     if (params.st) {
