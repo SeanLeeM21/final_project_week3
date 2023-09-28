@@ -2,9 +2,9 @@ import sys
 from ibmcloudant.cloudant_v1 import CloudantV1
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 def main(dict):
-    authenticator = IAMAuthenticator("NMZMf5sVTPtKFdJcRsvtnei4tsTtHAlMDHEOZfG_8szb")
+    authenticator = IAMAuthenticator("api-key")
     service = CloudantV1(authenticator=authenticator)
-    service.set_service_url("https://19fd4970-9180-4d9c-8e46-a95087cf83e1-bluemix.cloudantnosqldb.appdomain.cloud")
+    service.set_service_url("url")
     response = service.post_document(db='reviews', document=dict["review"]).get_result()
     try:
     # result_by_filter=my_database.get_query_result(selector,raw_result=True)
